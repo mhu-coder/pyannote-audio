@@ -26,6 +26,10 @@
 # AUTHORS
 # Hervé BREDIN - http://herve.niderb.fr
 
+import torch
+import torch.nn as nn
+from torch.autograd import Variable
+
 import numpy as np
 
 from pyannote.core import SlidingWindow, SlidingWindowFeature
@@ -38,9 +42,9 @@ from pyannote.audio.callback import LoggingCallback
 
 from pyannote.database import get_unique_identifier
 
-import torch.nn as nn
-from torch.autograd import Variable
-import torch
+# import torch
+# import torch.nn as nn
+# from torch.autograd import Variable
 
 
 class SequenceLabeling(PeriodicFeaturesMixin, FileBasedBatchGenerator):

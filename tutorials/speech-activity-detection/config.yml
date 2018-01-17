@@ -24,13 +24,9 @@
 # Hervé Bredin - http://herve.niderb.fr
 
 feature_extraction:
-   name: YaafeMFCC
-   params:
-      e: False                   # this experiments relies
-      De: True                   # on 11 MFCC coefficients
-      DDe: True                  # with 1st and 2nd derivatives
-      D: True                    # without energy, but with
-      DD: True                   # energy derivatives
+   name: Precomputed
+   params: 
+     root_dir: tutorials/feature-extraction
 
 architecture:
    name: StackedLSTM

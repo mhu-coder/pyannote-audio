@@ -1,8 +1,11 @@
 feature_extraction:
    name: YaafeMFCC
    params:
+      coefs: 11                  # 11 coefs
       e: False                   # this experiments relies
       De: True                   # on 11 MFCC coefficients
       DDe: True                  # with 1st and 2nd derivatives
       D: True                    # without energy, but with
       DD: True                   # energy derivatives
+      step: 0.010               # 10 ms shift
+      duration: 0.020            # 20 ms window
